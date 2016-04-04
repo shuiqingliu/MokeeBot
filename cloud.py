@@ -1,7 +1,7 @@
 from leancloud import Engine
-from bot import bot
+from app import app
 
-engin = Engine(bot)
+engin = Engine(app)
 
 @engin.define
 def hell(**parms):
