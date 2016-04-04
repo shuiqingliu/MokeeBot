@@ -1,11 +1,16 @@
+# coding: utf-8
+
 from leancloud import Engine
+
 from app import app
 
-engin = Engine(app)
 
-@engin.define
-def hell(**parms):
-    if 'name' in parms:
-        return 'hello ,{}!'.format(parms['name'])
+engine = Engine(app)
+
+
+@engine.define
+def hello(**params):
+    if 'name' in params:
+        return 'Hello, {}!'.format(params['name'])
     else:
-        return 'hello leancloud'
+        return 'Hello, LeanCloud!'
