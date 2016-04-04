@@ -18,7 +18,7 @@ logging.basicConfig(level=logging.DEBUG,format='%(asctime)s - %(name)s - %(level
 global bot
 bot = telegram.Bot(token='219236769:AAFaL3eMxy8R7Dk8K9Gwy8q6opURlDrf9Kk')
 
-@app.run('/token',method=['post'])
+@app.run('/token',methods=['post'])
 def runbot(token):
     if  request.method == "POST":
         update = telegram.Update.de_json(request.get_json(force=True))
